@@ -1,0 +1,12 @@
+.footer {
+    background-color: black;
+    color: grey;
+    display: flex;
+    align-items: center;
+    height: 5vh;
+
+}
+
+p {
+    margin: auto;
+}

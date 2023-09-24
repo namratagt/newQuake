@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
+import Layout from "./components/Layout/layout.jsx";
+import Entertainment from "./pages/entertainment/entertainment.jsx";
+import Sports from "./pages/sports/sports.jsx";
+import PageNotFound from "./pages/pagenotfound/pagenotfound.jsx";
+import Home from "./pages/home/home.jsx";
+import Science from "./pages/science/science.jsx";
+import Technology from "./pages/technology/technology.jsx";
+import Health from "./pages/health/health.jsx";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/entertainment" element={<Entertainment />} />
+            <Route path="/sports" element={<Sports />} />
+            <Route path="/health" element={<Health />} />
+            <Route path="/science" element={<Science />} />
+            <Route path="/technology" element={<Technology />} />
+            <Route element={<PageNotFound />} />
+          </Routes>
+        </Layout>
+      </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    background-color: black;
+    display: flex;
+    height: 4vh;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    color: azure;
+}
+
+.item {
+    color: grey;
+}
+
+.link {
+    color: grey;
+    text-decoration: none;
+}
+
+.name {
+    font-size: 9vh;
+    padding: 3%;
+    font-weight: bold;
+    color: grey;
+}
+
+.dropbtn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .name {
+        font-size: 6vh;
+    }
+
+}
